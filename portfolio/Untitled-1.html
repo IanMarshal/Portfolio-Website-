@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http eqeuiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio website </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div id="header">  
+    <div class="container">
+        <nav>
+           <a href=""class="logo"> Marshal</a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+                
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Cloud Engineer</p>
+            <h1>Hi, I'm <span>Ian Wamalwa</span> <br>from Kenya</h1>
+        </div>
+    </div>
+   </div> 
+
+ <!--------about------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="photos/IMG_20240923_114911.jpg" >
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me </h1>
+                <p>Lorem, ipsum dolor sit amet consectetur <br> 
+                adipisicing elit. Obcaecati eius numquam ducimus aspernatur molestias et labore, ipsum libero consequuntur <br>
+                 vero, quo Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae ab voluptatibus facilis corrupti delectus a assumenda, excepturi 
+                 tempore omnis adipisci ratione perferendis natus, dolorem d
+                 istinctio voluptas, minus praesentium error porro. dignissimos ipsam amet, possimus mollitia natus iste quia porro.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')"> skills</p>
+                    <p class="tab-links"onclick="opentab('experience')"> Experience</p>
+                    <p class="tab-links"onclick="opentab('education')"> Education</p>  
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span> UI/UX</span> <br> Designig Web/app interfaces</li>
+                        <li><span> Web development</span> <br> Web app develipment</li>
+                        <li><span> Web Development</span> <br> building android/ios apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        
+                        <li><span> attachment  </span> <br>Kplc IESR  </li>
+                    </ul>
+                </div>
+                <div class="tab-contents"id="education">
+                    <ul>
+                        <li><span> UI/UX</span> <br> Designig Web/app interfaces</li>
+                        <li><span>2024</span> <br>  Internship at KPLC IESR</li>
+                        <li><span> 2020-2024</span> <br> BSC IT from Kca University</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+   
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classlist.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classlist.remove("active-tab")
+            }
+            event.currentTarget.classlist.add("active-link");
+            document.elementbyId(tabname).classlist.add("active-tab");
+        }
+        
+    </script>
+</body>
+</html>

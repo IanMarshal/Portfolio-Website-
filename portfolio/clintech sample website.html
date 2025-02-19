@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style .css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="" class="logo">Marshal</a>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Cloud Engineer</p>
+                <h1>Hi, I'm <span>Ian Wamalwa</span> <br>from Kenya</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="photos/IMG_20240923_114911.jpg" alt="Ian Wamalwa's Profile Picture">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur <br> 
+                    adipisicing elit. Obcaecati eius numquam ducimus aspernatur molestias et labore, ipsum libero consequuntur <br>
+                     vero, quo Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae ab voluptatibus facilis corrupti delectus a assumenda, excepturi 
+                     tempore omnis adipisci ratione perferendis natus, dolorem d
+                     istinctio voluptas, minus praesentium error porro. dignissimos ipsam amet, possimus mollitia natus iste quia porro.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" data-tab="skills">Skills</p>
+                        <p class="tab-links" data-tab="experience">Experience</p>
+                        <p class="tab-links" data-tab="education">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span> <br> Designing Web/app interfaces</li>
+                            <li><span>Web Development</span> <br> Web app development</li>
+                            <li><span>Web Development</span> <br> Building android/ios apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Attachment</span> <br>Kplc IESR</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024</span> <br> Internship at KPLC IESR</li>
+                            <li><span>2020-2024</span> <br> BSC IT from Kca University</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------- services------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">my services</h1>
+        <div class="services-list">
+            <div>
+                <h2>web design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam laborum velit accusamus, saepe nemo mollitia? Sequi, id doloremque. Modi iste rerum autem illo unde ut omnis laudantium, minima non delectus.</p>
+                <a href="">learn more</a>
+            
+            </div>
+            <div>
+                <h2>UI/UX Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam laborum velit accusamus, saepe nemo mollitia? Sequi, id doloremque. Modi iste rerum autem illo unde ut omnis laudantium, minima non delectus.</p>
+                <a href="">learn more</a>
+            
+            </div>
+            <div>
+                <h2>UI/UX Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam laborum velit accusamus, saepe nemo mollitia? Sequi, id doloremque. Modi iste rerum autem illo unde ut omnis laudantium, minima non delectus.</p>
+                <a href="">learn more</a>
+            
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+    <script>
+        const tabLinks = document.querySelectorAll('.tab-links');
+        const tabContents = document.querySelectorAll('.tab-contents');
+
+        tabLinks.forEach((link) => {
+            link.addEventListener('click', (e) => {
+                const tabId = e.target.getAttribute('data-tab');
+                const tabContent = document.getElementById(tabId);
+
+                tabLinks.forEach((link) => link.classList.remove('active-link'));
+                e.target.classList.add('active-link');
+
+                tabContents.forEach((content) => content.classList.remove('active-tab'));
+                tabContent.classList.add('active-tab');
+            });
+        });
+    </script>
+</body>
+</html>
